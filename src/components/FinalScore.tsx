@@ -1,6 +1,5 @@
 interface FinalScoreProps{
-  selectedScore: number,
-  setSelectedScore: number
+  selectedScore: number | null
 }
 
 export const FinalScore = ({selectedScore}: FinalScoreProps) => {

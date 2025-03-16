@@ -1,5 +1,9 @@
+interface ScoresProps {
+  setSelectedScore: (score: number) => void;
+}
+
 const myScores = [1, 2, 3, 4, 5];
-export const Scores = () => {
+export const Scores = ({setSelectedScore}: ScoresProps) => {
   return (
     <div className=" w-72 flex justify-center items-center gap-4">
       {myScores.map((num) => {
@@ -10,6 +14,7 @@ export const Scores = () => {
               name="number"
               value={num}
               className="hidden peer"
+              onChange={() => setSelectedScore(num)}
             />
             <div className="bg-green-500 rounded-full flex justify-center items-center w-10 h-10">
               {num}
