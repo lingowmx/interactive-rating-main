@@ -6,7 +6,7 @@ interface ContainerProps {
  
 export const Container = ({children}: ContainerProps) => {
   return (
-    <div className="bg-darkBlue w-80 h-80 rounded-xl">
+    <div className="bg-darkBlue w-80 h-80 rounded-xl p-4">
       {children}
     </div>
   )
