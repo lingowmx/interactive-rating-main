@@ -4,8 +4,8 @@ interface SecondTextProps {
 
 export const SecondText = ({children}: SecondTextProps) => {
   return (
-    <div className="w-72">
-      <p className="text-white">{children}</p>
+    <div className="w-[280px]">
+      <p className="text-lightGrey text-sm mb-4">{children}</p>
     </div>
   )
 }

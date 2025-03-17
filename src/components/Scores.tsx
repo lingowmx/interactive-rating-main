@@ -5,7 +5,7 @@ interface ScoresProps {
 const myScores = [1, 2, 3, 4, 5];
 export const Scores = ({setSelectedScore}: ScoresProps) => {
   return (
-    <div className=" w-72 flex justify-center items-center gap-4">
+    <div className=" w-[280px] flex justify-between items-center gap-4">
       {myScores.map((num) => {
         return (
           <label key={num} className="cursor-pointer">
@@ -16,7 +16,9 @@ export const Scores = ({setSelectedScore}: ScoresProps) => {
               className="hidden peer"
               onChange={() => setSelectedScore(num)}
             />
-            <div className="bg-green-500 rounded-full flex justify-center items-center w-10 h-10">
+            <div 
+              className={`bg-lightGrey/30 text-lightGrey rounded-full flex justify-center items-center w-9 h-9 hover:bg-white hover:text-black
+              peer-checked:bg-amber-600 peer-checked:text-black mb-4`}>
               {num}
             </div>
           </label>
